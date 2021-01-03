@@ -47,7 +47,7 @@ function buildPipes(startPos){
     pipe1.start=startPos+totalWidth;
     pipe1.classList.add("pipe");
     pipe1.innerHTML="<br>"+player.pipe;
-    pipe1.height=Math.floor(Math.random()*600);
+    pipe1.height=Math.floor(Math.random()*320);
     pipe1.style.height=pipe1.height+"px";
     pipe1.style.left=pipe1.start+"px";
     pipe1.style.top = "0px";
@@ -55,12 +55,12 @@ function buildPipes(startPos){
     pipe1.id=player.pipe;
     pipe1.style.backgroundColor= pipeColor;
     gameArea.appendChild(pipe1);
-    let pipeSpace=Math.floor(Math.random()*200)+100;
+    let pipeSpace=Math.floor(Math.random()*250)+150;
     let pipe2 = document.createElement("div");
     pipe2.start=pipe1.start;
     pipe2.classList.add("pipe");
     pipe2.innerHTML="<br>"+player.pipe;
-    pipe2.height=totalHeight-pipe1.Height - pipeSpace+"px";
+    pipe2.height=totalHeight-pipe1.Height-pipeSpace+"px";
     pipe2.style.height=pipe1.height+"px";
     pipe2.style.left=pipe1.start+"px";
     pipe2.style.bottom = "0px";
